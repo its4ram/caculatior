@@ -1,0 +1,182 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* Space between profile icon and dark mode icon */
+}
+
+.profile-icon {
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-menu p {
+    margin: 5px 0;
+}
+
+.profile-menu a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-menu a:hover {
+    text-decoration: underline;
+}
+
+#dark-mode-toggle {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.slide-in-heading {
+    font-size: 2em;
+    color: #333;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-out;
+}
+
+header.scrolled .slide-in-heading {
+    transform: translateX(0);
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    /* Adjusted to make space for the fixed header */
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #000000;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .calculator {
+    background: #444;
+    border-color: #555;
+}
+
+body.dark-mode #display {
+    background: #555;
+    color: #fff;
+    border-color: #666;
+}
+
+body.dark-mode .btn {
+    background: #666;
+    color: #fff;
+}
+
+body.dark-mode .btn:hover {
+    background: #555;
+}
+
+body.dark-mode #dark-mode-toggle {
+    color: #fff;
+}
+
+
+/* Dark mode styles for the profile menu */
+
+body.dark-mode .profile-menu {
+    background: #333;
+    border-color: #444;
+}
+
+body.dark-mode .profile-menu p {
+    color: #f0f0f0;
+}
+
+body.dark-mode .profile-menu a {
+    color: #4a90e2;
+}
+
+body.dark-mode .profile-menu a:hover {
+    text-decoration: underline;
+}
